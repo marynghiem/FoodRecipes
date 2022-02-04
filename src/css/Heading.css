@@ -1,0 +1,11 @@
+.flowerBorder {
+  width: 19%;
+  height: auto;
+  display: inline-block;
+}
+
+.title {
+  font-family: URW Chancery L, cursive;
+  padding: 0px;
+  margin: 0px;
+}

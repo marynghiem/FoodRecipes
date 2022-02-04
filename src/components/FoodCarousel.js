@@ -8,7 +8,10 @@ export const FoodCarousel = () => {
     <div>
       <Carousel>
         <div>
-          <img src="fruit-weight-loss.jpeg" alt="bowl of fruits"></img>
+          <img src="fruits.jpeg" alt="bowl of fruits"></img>
+        </div>
+        <div>
+          <img src="blueberries.png" alt="bowl of blueberries" />
         </div>
       </Carousel>
       ;
