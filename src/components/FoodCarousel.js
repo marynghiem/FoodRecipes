@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 
 export const FoodCarousel = () => {
   return (
-    <div>
+    <div className="carouselContainer">
       <Carousel>
         <div>
           <img src="blueberries.png" alt="bowl of blueberries" />
