@@ -8,13 +8,12 @@ export const FoodCarousel = () => {
     <div>
       <Carousel>
         <div>
-          <img src="fruits.jpeg" alt="bowl of fruits"></img>
-        </div>
-        <div>
           <img src="blueberries.png" alt="bowl of blueberries" />
         </div>
+        <div>
+          <img src="fruits.jpeg" alt="bowl of fruits"></img>
+        </div>
       </Carousel>
-      ;
     </div>
   );
 };

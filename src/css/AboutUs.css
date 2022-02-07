@@ -1,0 +1,26 @@
+.aboutUsContainer {
+  background-color: rgb(236, 235, 235);
+  width: 300px;
+  height: 400px;
+}
+
+.aboutUsTitle {
+  font-weight: bold;
+  padding: 30px 0px 10px 0px;
+  margin-bottom: 0px;
+}
+
+.maryPicture {
+  width: 30%;
+  height: auto;
+  float: left;
+  padding: 10px 10px 5px 10px;
+}
+
+.maryInfo {
+  display: justify;
+  text-align: left;
+  padding: 10px;
+  font-family: Georgia, serif;
+  margin-top: 0px;
+}
