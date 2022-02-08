@@ -7,6 +7,8 @@ app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 
 // create a GET route
 app.get("/express_backend", (req, res) => {
-  //Line 9
+  // Make a request to spoonacular
+  fetch(`https:/boaijsfjs.com/?apikey=${process.env.API_KEY}`);
+  // Return the data back to the frontend
   res.send({ express: "YOUR EXPRESS BACKEND IS CONNECTED TO REACT" }); //Line 10
-}); //Line 11
+});
