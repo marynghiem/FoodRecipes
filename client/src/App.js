@@ -9,11 +9,13 @@ import { FetchingStuff } from "./components/FetchingStuff";
 function App() {
   return (
     <div className="App">
-      <Heading />
-      <NavBar />
-      <FoodCarousel />
-      <AboutUs />
-      <FetchingStuff />
+      <div className="homePageWrapper">
+        <Heading />
+        <NavBar />
+        <FoodCarousel />
+        <AboutUs />
+        <FetchingStuff />
+      </div>
       <Footer />
     </div>
   );
