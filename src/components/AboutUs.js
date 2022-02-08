@@ -13,11 +13,11 @@ export const AboutUs = () => {
       </p>
       <h5 className="followMeHeading">FOLLOW ME</h5>
       <div className="socialMediaLinks">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play" aria-hidden="true"></i>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <i class="fa fa-facebook space"></i>
+        <i class="fa fa-instagram space"></i>
+        <i class="fa fa-twitter space"></i>
+        <i class="fa fa-youtube-play space"></i>
+        <i class="fa fa-envelope space"></i>
       </div>
     </div>
   );
