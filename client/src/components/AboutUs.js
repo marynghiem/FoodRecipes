@@ -4,7 +4,7 @@ import "../css/AboutUs.css";
 export const AboutUs = () => {
   return (
     <div className="aboutUsContainer">
-      <h5 className="aboutUsTitle">ABOUT US</h5>
+      <h4 className="aboutUsTitle">ABOUT US</h4>
       <img className="maryPicture" src="marysPic.png" alt="Mary Nghiem" />
       <p className="maryInfo">
         Mary Nghiem recently graduated from San Jose State. She lives in California with three other siblings and her
