@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 export const FoodCarousel = () => {
   return (
     <div className="carouselContainer">
-      <Carousel>
+      <Carousel showThumbs={false}>
         <div>
           <img src="blueberries.png" alt="bowl of blueberries" />
         </div>

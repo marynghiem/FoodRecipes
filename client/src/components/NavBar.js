@@ -8,14 +8,17 @@ export const NavBar = () => {
         <a className="active navItem" href="#home">
           HOME <i className="fa fa-caret-down"></i>
         </a>
-        <a href="#breakfast" className="navItem">
+        <a href="/breakfast" className="navItem">
           BREAKFAST <i className="fa fa-caret-down"></i>
         </a>
-        <a href="#lunch" className="navItem">
+        <a href="/lunch" className="navItem">
           LUNCH <i className="fa fa-caret-down"></i>
         </a>
-        <a href="#dinner" className="navItem">
+        <a href="/dinner" className="navItem">
           DINNER <i className="fa fa-caret-down"></i>
+        </a>
+        <a href="/mealplan" className="navItem">
+          MEAL PLAN <i className="fa fa-caret-down"></i>
         </a>
       </div>
     </div>

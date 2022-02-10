@@ -10,5 +10,10 @@ export const FetchingStuff = () => {
       .then((data) => setData(data))
       .catch((exception) => console.error(exception));
   }, []);
-  return <div>{JSON.stringify(data)}</div>;
+
+  return (
+    <div>
+      <div>{JSON.stringify(data)}</div>
+    </div>
+  );
 };

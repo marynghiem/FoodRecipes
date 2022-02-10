@@ -16,11 +16,11 @@ export const Footer = () => {
             Along with providing easy recipes to follow, Mary Nghiem's Fave Eats also provides the user with information
             regarding the ingredients and the cost of those ingredients.
           </p>
-          <i class="fa fa-facebook space"></i>
-          <i class="fa fa-instagram space"></i>
-          <i class="fa fa-twitter space"></i>
-          <i class="fa fa-youtube-play space"></i>
-          <i class="fa fa-envelope space"></i>
+          <i className="fa fa-facebook space"></i>
+          <i className="fa fa-instagram space"></i>
+          <i className="fa fa-twitter space"></i>
+          <i className="fa fa-youtube-play space"></i>
+          <i className="fa fa-envelope space"></i>
         </div>
         <div className="footer-section categories">
           <h5 className="footer-categories-title">Categories</h5>
