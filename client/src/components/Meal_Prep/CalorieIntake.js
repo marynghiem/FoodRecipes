@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MealList } from "./MealList";
+import "../../css/CalorieIntake.css";
 
 export const CalorieIntake = () => {
   const [mealData, setMealData] = useState(null);
@@ -19,8 +20,10 @@ export const CalorieIntake = () => {
   return (
     <div className="calorieIntakeContainer">
       <section className="controls"></section>
-      <input type="number" placeholder="Calories (e.g. 2000)" onChange={handleChange} />
-      <button onClick={getMealData}>Get Daily Meal Plan</button>
+      <input type="number" placeholder="Calories (e.g. 2000)" onChange={handleChange} className="calorieNumberInput" />
+      <button onClick={getMealData} className="calorieIntakeButton">
+        Get Daily Meal Plan
+      </button>
       {mealData && <MealList mealData={mealData} />}
     </div>
   );
