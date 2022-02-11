@@ -3,8 +3,8 @@ import "../../css/MarysTopDinner.css";
 
 export const MarysTopDinner = () => {
   return (
-    <div>
-      <h3>Mary's Top Dinner Choices</h3>
+    <div className="marys-top-dinner-container">
+      <h3 className="marys-top-dinner-title">Mary's Top Dinner Choices</h3>
     </div>
   );
 };
