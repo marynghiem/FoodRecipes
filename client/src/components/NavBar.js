@@ -5,7 +5,7 @@ export const NavBar = () => {
   return (
     <div className="navContainer">
       <div className="topNav">
-        <a className="active navItem" href="#home">
+        <a className="active navItem" href="/home">
           HOME <i className="fa fa-caret-down"></i>
         </a>
         <a href="/breakfast" className="navItem">
@@ -14,8 +14,17 @@ export const NavBar = () => {
         <a href="/lunch" className="navItem">
           LUNCH <i className="fa fa-caret-down"></i>
         </a>
-        <a href="/dinner" className="navItem">
-          DINNER <i className="fa fa-caret-down"></i>
+        <div class="navItem dropdown">
+          <button class="dropbtn">
+            DINNER <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/marysTopDinner">Mary's Top Dinner Choices</a>
+            <a href="/dinnerByIngredient">Dinner By Ingredient</a>
+          </div>
+        </div>
+        <a href="/desserts" className="navItem">
+          DESSERTS<i className="fa fa-caret-down"></i>
         </a>
         <div class="navItem dropdown">
           <button class="dropbtn">

@@ -16,7 +16,7 @@ export const CalorieIntake = () => {
       .then((response) => response.json())
       .then((data) => setMealData(data))
       .catch((exception) => console.error(exception));
-  }; //problem with passing state from front to back end
+  };
   return (
     <div className="calorieIntakeContainer">
       <section className="controls"></section>
