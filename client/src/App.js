@@ -9,6 +9,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { CalorieIntake } from "./components/Meal_Prep/CalorieIntake";
 import { MarysTopDinner } from "./components/Dinner/MarysTopDinner";
+import { DinnerByIngredient } from "./components/Dinner/DinnerByIngredient";
 
 function App() {
   return (
@@ -27,20 +28,28 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/calorieIntake"
-            element={
-              <>
-                <CalorieIntake />
-              </>
-            }
-          />
           <Route path="/desserts" element={<></>} />
           <Route
             path="/marysTopDinner"
             element={
               <>
                 <MarysTopDinner />
+              </>
+            }
+          />
+          <Route
+            path="/dinnerByIngredient"
+            element={
+              <>
+                <DinnerByIngredient />
+              </>
+            }
+          />
+          <Route
+            path="/calorieIntake"
+            element={
+              <>
+                <CalorieIntake />
               </>
             }
           />

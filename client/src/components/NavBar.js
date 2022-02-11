@@ -14,11 +14,11 @@ export const NavBar = () => {
         <a href="/lunch" className="navItem">
           LUNCH <i className="fa fa-caret-down"></i>
         </a>
-        <div class="navItem dropdown">
-          <button class="dropbtn">
-            DINNER <i class="fa fa-caret-down"></i>
+        <div className="navItem dropdown">
+          <button className="dropbtn">
+            DINNER <i className="fa fa-caret-down"></i>
           </button>
-          <div class="dropdown-content">
+          <div className="dropdown-content">
             <a href="/marysTopDinner">Mary's Top Dinner Choices</a>
             <a href="/dinnerByIngredient">Dinner By Ingredient</a>
           </div>
@@ -26,11 +26,11 @@ export const NavBar = () => {
         <a href="/desserts" className="navItem">
           DESSERTS<i className="fa fa-caret-down"></i>
         </a>
-        <div class="navItem dropdown">
-          <button class="dropbtn">
-            MEAL PLAN <i class="fa fa-caret-down"></i>
+        <div className="navItem dropdown">
+          <button className="dropbtn">
+            MEAL PLAN <i className="fa fa-caret-down"></i>
           </button>
-          <div class="dropdown-content">
+          <div className="dropdown-content">
             <a href="/calorieIntake">Meal Prep By Calories</a>
           </div>
         </div>
