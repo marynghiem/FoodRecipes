@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../../css/Dinner/DinnerByIngredient.css";
+import "../../css/MealPrep/MealPrepByIngredient.css";
 
-export const DinnerByIngredient = () => {
-  const [dinnerData, setDinnerDat] = useState();
+export const MealPrepByIngredient = () => {
+  const [dinnerData, setDinnerData] = useState();
   const [dinnerIngredients, setDinnerIngredients] = useState([]);
   const [currentDinnerIngredient, setCurrentDinnerIngredient] = useState("");
 

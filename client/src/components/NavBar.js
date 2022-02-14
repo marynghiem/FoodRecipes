@@ -20,7 +20,6 @@ export const NavBar = () => {
           </button>
           <div className="dropdown-content">
             <a href="/marysTopDinner">Mary's Top Dinner Choices</a>
-            <a href="/dinnerByIngredient">Dinner By Ingredient</a>
           </div>
         </div>
         <a href="/desserts" className="navItem">
@@ -32,6 +31,7 @@ export const NavBar = () => {
           </button>
           <div className="dropdown-content">
             <a href="/calorieIntake">Meal Prep By Calories</a>
+            <a href="/mealPrepByIngredient">Meal Prep By Ingredient</a>
           </div>
         </div>
       </div>
