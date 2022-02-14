@@ -61,6 +61,8 @@ export const Footer = () => {
         </div>
         <div className="footer-section footer-contact-us">
           <h5 className="footer-contact-us-title">Contact Us</h5>
+          <input placeholder="Your email address"></input>
+          <input placeholder="Message..."></input>
         </div>
       </div>
       <div className="footer-bottom">&copy; Mary Nghiem's Fave Eats | Designed by Mary Nghiem</div>
