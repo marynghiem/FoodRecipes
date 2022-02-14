@@ -19,8 +19,14 @@ export const CalorieIntake = () => {
   };
   return (
     <div className="calorieIntakeContainer">
-      <section className="controls"></section>
-      <input type="number" placeholder="Calories (e.g. 2000)" onChange={handleChange} className="calorieNumberInput" />
+      <section className="controls">
+        <input
+          type="number"
+          placeholder="Calories (e.g. 2000)"
+          onChange={handleChange}
+          className="calorieNumberInput"
+        />
+      </section>
       <button onClick={getMealData} className="calorieIntakeButton">
         Get Daily Meal Plan
       </button>
