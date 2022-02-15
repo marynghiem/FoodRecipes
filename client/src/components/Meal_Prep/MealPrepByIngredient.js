@@ -29,7 +29,30 @@ export const MealPrepByIngredient = () => {
   return (
     <div className="mealByIngredientContainer">
       <div className="mealByIngredientWhiteContainer">
-        <div>Enter Ingredient</div>
+        <div>Choose from popular ingredients:</div>
+        <div className="ingredientsContainer">
+          <div className="individualIngredientContainer">
+            <img src="carrots.jpeg" alt="carrots" className="smallIngredientsPicture" />
+            <div className="ingredient">Carrots</div>
+          </div>
+          <div className="individualIngredientContainer">
+            <img src="pasta.jpeg" alt="pasta" className="smallIngredientsPicture" />
+            <div className="ingredient">Pasta</div>
+          </div>
+          <div className="individualIngredientContainer">
+            <img src="chicken.jpeg" alt="chicken" className="smallIngredientsPicture" />
+            <div className="ingredient">Chicken</div>
+          </div>
+          <div className="individualIngredientContainer">
+            <img src="apples.jpeg" alt="apples" className="smallIngredientsPicture" />
+            <div className="ingredient">Apples</div>
+          </div>
+          <div className="individualIngredientContainer">
+            <img src="salmon.jpeg" alt="salmon" className="smallIngredientsPicture" />
+            <div className="ingredient">Salmon</div>
+          </div>
+        </div>
+        <div>Or enter an ingredient:</div>
         <section className="mealIngredientControls">
           <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
         </section>
