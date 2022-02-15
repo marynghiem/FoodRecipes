@@ -28,13 +28,14 @@ export const MealPrepByIngredient = () => {
 
   return (
     <div className="mealByIngredientContainer">
-      <div>Enter Ingredient</div>
-      <section className="mealIngredientControls">
-        <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
-      </section>
-      <button onClick={addMealIngredients}>Add Ingredient</button>
-      <button onClick={getMealByIngredientsData}>Get Dinner</button>
-      <div>{JSON.stringify(mealByIngredientsData)}</div>
+      <div className="mealByIngredientWhiteContainer">
+        <div>Enter Ingredient</div>
+        <section className="mealIngredientControls">
+          <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
+        </section>
+        <button onClick={addMealIngredients}>Add Ingredient</button>
+        <button onClick={getMealByIngredientsData}>Get Dinner</button>
+      </div>
     </div>
   );
 };
