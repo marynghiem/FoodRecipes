@@ -2,29 +2,39 @@ import React, { useState } from "react";
 import "../../css/MealPrep/MealPrepByIngredient.css";
 
 export const MealPrepByIngredient = () => {
-  const [dinnerData, setDinnerData] = useState();
-  const [dinnerIngredients, setDinnerIngredients] = useState([]);
-  const [currentDinnerIngredient, setCurrentDinnerIngredient] = useState("");
+  const [mealByIngredientsData, setMealByIngredientsData] = useState();
+  const [mealIngredients, setMealIngredients] = useState([]);
+  const [currentMealIngredient, setCurrentMealIngredient] = useState("");
 
-  const handleDinnerIngredientsChange = (e) => {
-    setCurrentDinnerIngredient(e.target.value);
+  const handleMealIngredientsChange = (e) => {
+    setCurrentMealIngredient(e.target.value);
   };
 
-  const addDinnerIngredients = () => {
-    setDinnerIngredients([...dinnerIngredients, currentDinnerIngredient]);
-    setCurrentDinnerIngredient("");
+  const addMealIngredients = () => {
+    setMealIngredients([...mealIngredients, currentMealIngredient]);
+    setCurrentMealIngredient("");
   };
 
-  console.log(currentDinnerIngredient);
-  console.log(dinnerIngredients);
+  const getMealByIngredientsData = () => {
+    const url = `/mealplan_ingredients?mealIngredients=${mealIngredients[0]}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setMealByIngredientsData(data))
+      .catch((exception) => console.error(exception));
+  };
+
+  console.log(currentMealIngredient);
+  console.log(mealIngredients);
 
   return (
-    <div className="dinnerByIngredientContainer">
+    <div className="mealByIngredientContainer">
       <div>Enter Ingredient</div>
-      <section className="dinnerIngredientControls">
-        <input placeholder="e.g" onChange={handleDinnerIngredientsChange} value={currentDinnerIngredient}></input>
+      <section className="mealIngredientControls">
+        <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
       </section>
-      <button onClick={addDinnerIngredients}>Get Dinner</button>
+      <button onClick={addMealIngredients}>Add Ingredient</button>
+      <button onClick={getMealByIngredientsData}>Get Dinner</button>
+      <div>{JSON.stringify(mealByIngredientsData)}</div>
     </div>
   );
 };

@@ -142,7 +142,7 @@ app.get("/mealplan_recipes", async (req, res) => {
   const isDev = true;
   let data = null;
   if (isDev) {
-    console.log(mockData.mealPicturesData);
+    console.log("mockdata:" + mockData.mealPicturesData);
     data = mockData.mealPicturesData.find((data) => data.id.toString() === mealID);
   } else {
     data = await fetch(
@@ -150,6 +150,17 @@ app.get("/mealplan_recipes", async (req, res) => {
     ).then((response) => response.json());
     console.log(data);
   }
+
+  res.send(data);
+});
+
+app.get("/mealplan_ingredients", async (req, res) => {
+  const mealIngredients = req.query.mealIngredients;
+  console.log(mealIngredients);
+  data = await fetch(
+    `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&ingredients=${mealIngredients}`
+  ).then((response) => response.json());
+  console.log(data);
 
   res.send(data);
 });
