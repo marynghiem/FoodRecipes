@@ -58,6 +58,14 @@ export const MealPrepByIngredient = () => {
         </section>
         <button onClick={addMealIngredients}>Add Ingredient</button>
         <button onClick={getMealByIngredientsData}>Get Dinner</button>
+        {mealByIngredientsData?.length > 0 &&
+          mealByIngredientsData.map((data) => (
+            <div className="ingredientDataResultsContainer">
+              <img src={data.image} alt={data.title} className="ingredientDataResultsImage"></img>
+              <div className="ingredientDataResultsTitle">{data.title}</div>
+            </div>
+          ))}
+        <div>{JSON.stringify(mealByIngredientsData)}</div>
       </div>
     </div>
   );
