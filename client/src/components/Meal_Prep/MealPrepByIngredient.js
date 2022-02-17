@@ -22,6 +22,9 @@ export const MealPrepByIngredient = () => {
       .then((data) => setMealByIngredientsData(data))
       .catch((exception) => console.error(exception));
   };
+  const addPopularIngredient = (popularIngredient) => {
+    setMealIngredients([...mealIngredients, popularIngredient]);
+  };
 
   console.log(currentMealIngredient);
   console.log(mealIngredients);
@@ -32,23 +35,48 @@ export const MealPrepByIngredient = () => {
         <div>Choose from popular ingredients:</div>
         <div className="ingredientsContainer">
           <div className="individualIngredientContainer">
-            <img src="carrots.jpeg" alt="carrots" className="smallIngredientsPicture" />
+            <img
+              src="carrots.jpeg"
+              alt="carrots"
+              className="smallIngredientsPicture"
+              onClick={() => addPopularIngredient("carrots")}
+            />
             <div className="ingredient">Carrots</div>
           </div>
           <div className="individualIngredientContainer">
-            <img src="pasta.jpeg" alt="pasta" className="smallIngredientsPicture" />
+            <img
+              src="pasta.jpeg"
+              alt="pasta"
+              className="smallIngredientsPicture"
+              onClick={() => addPopularIngredient("pasta")}
+            />
             <div className="ingredient">Pasta</div>
           </div>
           <div className="individualIngredientContainer">
-            <img src="chicken.jpeg" alt="chicken" className="smallIngredientsPicture" />
+            <img
+              src="chicken.jpeg"
+              alt="chicken"
+              className="smallIngredientsPicture"
+              onClick={() => addPopularIngredient("chicken")}
+            />
             <div className="ingredient">Chicken</div>
           </div>
           <div className="individualIngredientContainer">
-            <img src="apples.jpeg" alt="apples" className="smallIngredientsPicture" />
+            <img
+              src="apples.jpeg"
+              alt="apples"
+              className="smallIngredientsPicture"
+              onClick={() => addPopularIngredient("apples")}
+            />
             <div className="ingredient">Apples</div>
           </div>
           <div className="individualIngredientContainer">
-            <img src="salmon.jpeg" alt="salmon" className="smallIngredientsPicture" />
+            <img
+              src="salmon.jpeg"
+              alt="salmon"
+              className="smallIngredientsPicture"
+              onClick={() => addPopularIngredient("salmon")}
+            />
             <div className="ingredient">Salmon</div>
           </div>
         </div>
