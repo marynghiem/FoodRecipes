@@ -1,11 +1,11 @@
 .mealByIngredientContainer {
   background-image: url("../../../public/mealPlanByIngredientsBackground.jpeg");
-  height: 130vh;
+  height: 220vh;
   padding-top: 80px;
 }
 .mealByIngredientWhiteContainer {
   width: 700px;
-  height: 700px;
+  height: 300px;
   background-color: #fefefe;
   position: relative;
   margin: 0px auto;
@@ -47,4 +47,21 @@
   display: inline-block;
   vertical-align: middle;
   padding-top: 10px;
+}
+.mealByIngredientsResultsWholeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ingredientDataResultsContainer {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 }

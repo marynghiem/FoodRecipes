@@ -114,6 +114,8 @@ export const MealPrepByIngredient = () => {
             </span>
           </div>
         </div>
+      </div>
+      <div className="mealByIngredientsResultsWholeContainer">
         {mealByIngredientsData?.length > 0 &&
           mealByIngredientsData.map((data) => (
             <div className="ingredientDataResultsContainer">
@@ -121,7 +123,6 @@ export const MealPrepByIngredient = () => {
               <div className="ingredientDataResultsTitle">{data.title}</div>
             </div>
           ))}
-        <div>{JSON.stringify(mealByIngredientsData)}</div>
       </div>
     </div>
   );
