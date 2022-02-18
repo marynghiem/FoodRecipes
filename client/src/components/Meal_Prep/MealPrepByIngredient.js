@@ -15,6 +15,12 @@ export const MealPrepByIngredient = () => {
     setCurrentMealIngredient("");
   };
 
+  const removeMealIngredient = (targetIndex) => {
+    setMealIngredients((prev) => {
+      return prev.filter((mealIngredient, index) => index !== targetIndex);
+    });
+  };
+
   const getMealByIngredientsData = () => {
     const url = `/mealplan_ingredients?mealIngredients=${mealIngredients[0]}`;
     fetch(url)
@@ -84,8 +90,30 @@ export const MealPrepByIngredient = () => {
         <section className="mealIngredientControls">
           <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
         </section>
+
         <button onClick={addMealIngredients}>Add Ingredient</button>
         <button onClick={getMealByIngredientsData}>Get Dinner</button>
+        <div className="dottedAllIngredientsContainer">
+          <div className="dottedIngredientContainer">
+            <div className="chosenIngredient">{mealIngredients[0]}</div>
+            <span className="deleteMealIngredient" onClick={() => removeMealIngredient(0)}>
+              &times;
+            </span>
+          </div>
+
+          <div className="dottedIngredientContainer">
+            <div className="chosenIngredient">{mealIngredients[1]}</div>
+            <span className="deleteMealIngredient" onClick={() => removeMealIngredient(1)}>
+              &times;
+            </span>
+          </div>
+          <div className="dottedIngredientContainer">
+            <div className="chosenIngredient"> {mealIngredients[2]}</div>
+            <span className="deleteMealIngredient" onClick={() => removeMealIngredient(2)}>
+              &times;
+            </span>
+          </div>
+        </div>
         {mealByIngredientsData?.length > 0 &&
           mealByIngredientsData.map((data) => (
             <div className="ingredientDataResultsContainer">
