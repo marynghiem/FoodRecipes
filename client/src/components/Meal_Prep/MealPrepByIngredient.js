@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../css/MealPrep/MealPrepByIngredient.css";
 
+const MAX_INGREDIENTS = 3;
 export const MealPrepByIngredient = () => {
   const [mealByIngredientsData, setMealByIngredientsData] = useState();
   const [mealIngredients, setMealIngredients] = useState([]);
@@ -11,8 +12,10 @@ export const MealPrepByIngredient = () => {
   };
 
   const addMealIngredients = () => {
-    setMealIngredients([...mealIngredients, currentMealIngredient]);
-    setCurrentMealIngredient("");
+    if (!mealIngredients.includes(currentMealIngredient) && mealIngredients.length < MAX_INGREDIENTS) {
+      setMealIngredients([...mealIngredients, currentMealIngredient]);
+      setCurrentMealIngredient("");
+    }
   };
 
   const removeMealIngredient = (targetIndex) => {
@@ -28,8 +31,11 @@ export const MealPrepByIngredient = () => {
       .then((data) => setMealByIngredientsData(data))
       .catch((exception) => console.error(exception));
   };
+
   const addPopularIngredient = (popularIngredient) => {
-    setMealIngredients([...mealIngredients, popularIngredient]);
+    if (!mealIngredients.includes(popularIngredient) && mealIngredients.length < MAX_INGREDIENTS) {
+      setMealIngredients([...mealIngredients, popularIngredient]);
+    }
   };
 
   console.log(currentMealIngredient);
