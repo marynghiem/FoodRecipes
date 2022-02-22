@@ -96,9 +96,9 @@ export const MealPrepByIngredient = () => {
         <section className="mealIngredientControls">
           <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
         </section>
-
-        <button onClick={addMealIngredients}>Add Ingredient</button>
-        <button onClick={getMealByIngredientsData}>Get Dinner</button>
+        <button onClick={addMealIngredients} className="ingredientsButton addIngredientButton">
+          Add Ingredient
+        </button>
         <div className="dottedAllIngredientsContainer">
           <div className="dottedIngredientContainer">
             <div className="chosenIngredient">{mealIngredients[0]}</div>
@@ -106,7 +106,6 @@ export const MealPrepByIngredient = () => {
               &times;
             </span>
           </div>
-
           <div className="dottedIngredientContainer">
             <div className="chosenIngredient">{mealIngredients[1]}</div>
             <span className="deleteMealIngredient" onClick={() => removeMealIngredient(1)}>
@@ -120,6 +119,9 @@ export const MealPrepByIngredient = () => {
             </span>
           </div>
         </div>
+        <button onClick={getMealByIngredientsData} className="ingredientsButton getIngredientDataButton">
+          Get Dinner
+        </button>
       </div>
       <div className="mealByIngredientsResultsWholeContainer">
         {mealByIngredientsData?.length > 0 &&

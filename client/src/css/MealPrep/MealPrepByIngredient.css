@@ -5,7 +5,7 @@
 }
 .mealByIngredientWhiteContainer {
   width: 700px;
-  height: 300px;
+  height: 320px;
   background-color: #fefefe;
   position: relative;
   margin: 0px auto;
@@ -23,10 +23,16 @@
   margin: 15px;
   margin-top: 20px;
 }
-.ingredientDataResultsContainer {
+.mealIngredientControls {
   display: inline-block;
-  width: 70vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+.addIngredientButton {
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .dottedAllIngredientsContainer {
   display: block;
   margin-top: 10px;
@@ -39,6 +45,9 @@
   margin-left: 10px;
   margin-right: 10px;
   vertical-align: top;
+}
+.getIngredientDataButton {
+  margin-top: 20px;
 }
 
 .chosenIngredient {

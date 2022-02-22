@@ -10,6 +10,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { CalorieIntake } from "./components/Meal_Prep/CalorieIntake";
 import { MarysTopDinner } from "./components/Dinner/MarysTopDinner";
 import { MealPrepByIngredient } from "./components/Meal_Prep/MealPrepByIngredient";
+import { Breakfast } from "./components/Breakfast/Breakfast";
+import { MarysTopBreakfast } from "./components/Breakfast/MarysTopBreakfast";
+import { Appetizers } from "./components/Dinner/Appetizers";
+import { MainCourse } from "./components/Dinner/MainCourse";
+import { SideDish } from "./components/Dinner/SideDish";
+import { Dessert } from "./components/Dessert/Dessert";
+import { MarysTopDessert } from "./components/Dessert/MarysTopDessert";
 
 function App() {
   return (
@@ -28,15 +35,22 @@ function App() {
               </>
             }
           />
-          <Route path="/desserts" element={<></>} />
           <Route
-            path="/marysTopDinner"
+            path="/breakfast"
             element={
               <>
-                <MarysTopDinner />
+                <Breakfast />
               </>
             }
           />
+          <Route path="/marysTopBreakfast" element={<MarysTopBreakfast />} />
+
+          <Route path="/appetizers" element={<Appetizers />} />
+          <Route path="/mainCourse" element={<MainCourse />} />
+          <Route path="/marysTopDinner" element={<MarysTopDinner />} />
+          <Route path="/sideDish" element={<SideDish />} />
+          <Route path="/marysTopDesserts" element={<MarysTopDessert />} />
+          <Route path="/desserts" element={<Dessert />} />
           <Route
             path="/calorieIntake"
             element={
