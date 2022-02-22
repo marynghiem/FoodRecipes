@@ -94,7 +94,12 @@ export const MealPrepByIngredient = () => {
         </div>
         <div>Or enter an ingredient:</div>
         <section className="mealIngredientControls">
-          <input placeholder="e.g" onChange={handleMealIngredientsChange} value={currentMealIngredient}></input>
+          <input
+            placeholder="e.g apples"
+            onChange={handleMealIngredientsChange}
+            value={currentMealIngredient}
+            className="mealIngredientInput"
+          ></input>
         </section>
         <button onClick={addMealIngredients} className="ingredientsButton addIngredientButton">
           Add Ingredient
