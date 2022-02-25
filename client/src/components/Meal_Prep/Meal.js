@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 export const Meal = ({ meal }) => {
   const [imageUrl, setImageUrl] = useState("");
 
-  const url = `/mealplan_recipes?meal_id=${meal.id}`;
   useEffect(() => {
+    const url = `/mealplan_recipes?meal_id=${meal.id}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setImageUrl(data.image))
