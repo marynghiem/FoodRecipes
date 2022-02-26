@@ -1,15 +1,27 @@
 import React from "react";
-import "../css/Heading.css";
+import styled from "styled-components";
+
+const FlowerBorder = styled.img`
+  width: 20%;
+  height: auto;
+  display: inline-block;
+`;
+const Title = styled.h1`
+  font-family: Didot, serif;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+`;
 
 export const Heading = () => {
   return (
     <div>
-      <img src="flowers.png" alt="purple flowers" className="flowerBorder"></img>
-      <img src="flowers.png" alt="purple flowers" className="flowerBorder"></img>
-      <img src="flowers.png" alt="purple flowers" className="flowerBorder"></img>
-      <img src="flowers.png" alt="purple flowers" className="flowerBorder"></img>
-      <img src="flowers.png" alt="purple flowers" className="flowerBorder"></img>
-      <h1 className="title">Mary Nghiem's Fave Eats</h1>
+      <FlowerBorder src="flowers.png" alt="purple flowers" />
+      <FlowerBorder src="flowers.png" alt="purple flowers" />
+      <FlowerBorder src="flowers.png" alt="purple flowers" />
+      <FlowerBorder src="flowers.png" alt="purple flowers" />
+      <FlowerBorder src="flowers.png" alt="purple flowers" />
+      <Title>Mary Nghiem's Fave Eats</Title>
     </div>
   );
 };
