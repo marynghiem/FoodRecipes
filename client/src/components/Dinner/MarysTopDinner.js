@@ -1,11 +1,29 @@
 import React from "react";
-import "../../css/Dinner/MarysTopDinner.css";
+import styled from "styled-components";
+
+const MarysTopDinnerContainer = styled.div`
+  background-image: url("marysFavoriteDinnerBackground.jpeg");
+  height: 130vh;
+`;
+
+const MarysTopDinnerTitle = styled.h3`
+  margin-top: 0px;
+`;
+
+const WhiteBoxContainerForTopDinner = styled.div`
+  width: 700px;
+  height: 700px;
+  background-color: #fefefe;
+  position: relative;
+  margin: 80px auto;
+  margin-bottom: 80px;
+`;
 
 export const MarysTopDinner = () => {
   return (
-    <div className="marysTopDinnerContainer">
-      <h3 className="marysTopDinnerTitle">Mary's Top Dinner Choices</h3>
-      <div className="whiteBoxContainerForTopDinner"></div>
-    </div>
+    <MarysTopDinnerContainer>
+      <MarysTopDinnerTitle>Mary's Top Dinner Choices</MarysTopDinnerTitle>
+      <WhiteBoxContainerForTopDinner></WhiteBoxContainerForTopDinner>
+    </MarysTopDinnerContainer>
   );
 };
