@@ -1,7 +1,10 @@
 import React from "react";
-import "../../css/Dessert/Dessert.css";
 import styled from "styled-components";
 
+const DessertContainer = styled.div`
+  background-image: url("dessertBackground.jpeg");
+  height: 130vh;
+`;
 const Container = styled.div`
   width: 100px;
   height: 100px;
@@ -10,8 +13,8 @@ const Container = styled.div`
 
 export const Dessert = () => {
   return (
-    <div className="dessertContainer">
+    <DessertContainer>
       <Container />
-    </div>
+    </DessertContainer>
   );
 };
