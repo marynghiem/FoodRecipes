@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../css/Home/FetchingStuff.css";
+import styled from "styled-components";
+
+const DataResultsContainer = styled.div`
+  width: 70vw;
+`;
+const DataResultsIndividualContainer = styled.div`
+  display: inline-block;
+`;
 
 export const FetchingStuff = () => {
   // const url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=<redacted>&query=pasta";
@@ -14,15 +21,15 @@ export const FetchingStuff = () => {
 
   return (
     <div>
-      <div className="dataResultsContainer">
+      <DataResultsContainer>
         {data?.results?.length > 0 &&
           data.results.map((result) => (
-            <div className="dataResultsIndividualContainer">
+            <DataResultsIndividualContainer>
               <img src={result.image} alt={result.title} className="dataResultsImage"></img>
               <div className="dataResultsTitle">{result.title}</div>
-            </div>
+            </DataResultsIndividualContainer>
           ))}
-      </div>
+      </DataResultsContainer>
       <div>{JSON.stringify(data)}</div>
     </div>
   );
