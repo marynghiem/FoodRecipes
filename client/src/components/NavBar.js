@@ -10,7 +10,7 @@ export const NavBar = () => {
         </a>
         <div className="navItem dropdown">
           <button className="dropbtn">
-            BREAKFAST<i className="fa fa-caret-down"></i>
+            BREAKFAST <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
             <a href="/breakfast">Breakfast</a>
@@ -30,7 +30,7 @@ export const NavBar = () => {
         </div>
         <div className="navItem dropdown">
           <button className="dropbtn">
-            DESSERTS<i className="fa fa-caret-down"></i>
+            DESSERTS <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
             <a href="/desserts">Desserts List</a>

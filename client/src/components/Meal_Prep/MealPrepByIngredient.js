@@ -132,8 +132,11 @@ export const MealPrepByIngredient = () => {
         {mealByIngredientsData?.length > 0 &&
           mealByIngredientsData.map((data) => (
             <div className="ingredientDataResultsContainer">
-              <img src={data.image} alt={data.title} className="ingredientDataResultsImage"></img>
               <div className="ingredientDataResultsTitle">{data.title}</div>
+              <img src={data.image} alt={data.title} className="ingredientDataResultsImage"></img>
+              <a href="/mealRecipeByID">
+                <button>Get Recipe</button>
+              </a>
             </div>
           ))}
       </div>

@@ -17,6 +17,7 @@ import { MainCourse } from "./components/Dinner/MainCourse";
 import { SideDish } from "./components/Dinner/SideDish";
 import { Dessert } from "./components/Dessert/Dessert";
 import { MarysTopDessert } from "./components/Dessert/MarysTopDessert";
+import { MealRecipeByID } from "./components/MealRecipeByID";
 
 function App() {
   return (
@@ -59,14 +60,8 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/mealPrepByIngredient"
-            element={
-              <>
-                <MealPrepByIngredient />
-              </>
-            }
-          />
+          <Route path="/mealPrepByIngredient" element={<MealPrepByIngredient />} />
+          <Route path="/mealRecipeByID" element={<MealRecipeByID />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
