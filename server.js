@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { response } = require("express");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
@@ -8,7 +9,7 @@ const mockData = require("./testSpoonacularData");
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// create a GET route
+// endpoint for front page
 app.get("/express_backend", async (req, res) => {
   // Make a request to spoonacular
   const isDev = true;
@@ -90,6 +91,17 @@ app.get("/express_backend", async (req, res) => {
   res.send(data);
 });
 
+//ask jo about this
+app.get("/food_type_results", async (req, res) => {
+  const mealtype = req.query.mealtype;
+  let data = null;
+  data = await fetch(
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.API_KEY}&type=${mealtype}&number=25`
+  ).then((response) => response.json());
+  res.send(data);
+});
+
+//endpoint calories
 app.get("/mealplan_calories", async (req, res) => {
   const calories = req.query.calories;
   console.log(calories);
@@ -135,6 +147,7 @@ app.get("/mealplan_calories", async (req, res) => {
   res.send(data);
 });
 
+//endpoint for id information
 app.get("/mealplan_recipes", async (req, res) => {
   const mealID = req.query.meal_id;
   console.log(mealID);
@@ -153,7 +166,7 @@ app.get("/mealplan_recipes", async (req, res) => {
 
   res.send(data);
 });
-
+//endpoint for mealplan info for ingredients
 app.get("/mealplan_ingredients", async (req, res) => {
   const mealIngredients = req.query.mealIngredients;
   const isDev = true;
