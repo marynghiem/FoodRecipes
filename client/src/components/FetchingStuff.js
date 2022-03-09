@@ -2,14 +2,26 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const DataResultsContainer = styled.div`
-  width: 70vw;
+  width: 78vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
 `;
 const DataResultsIndividualContainer = styled.div`
   display: inline-block;
 `;
+const DataResultsWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
+`;
 
 export const FetchingStuff = () => {
-  // const url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=<redacted>&query=pasta";
   const url = "/express_backend";
   const [data, setData] = useState();
   useEffect(() => {
@@ -24,13 +36,14 @@ export const FetchingStuff = () => {
       <DataResultsContainer>
         {data?.results?.length > 0 &&
           data.results.map((result) => (
-            <DataResultsIndividualContainer>
-              <img src={result.image} alt={result.title} className="dataResultsImage"></img>
-              <div className="dataResultsTitle">{result.title}</div>
-            </DataResultsIndividualContainer>
+            <DataResultsWhiteContainer>
+              <DataResultsIndividualContainer>
+                <img src={result.image} alt={result.title} />
+                <div className="dataResultsTitle">{result.title}</div>
+              </DataResultsIndividualContainer>
+            </DataResultsWhiteContainer>
           ))}
       </DataResultsContainer>
-      <div>{JSON.stringify(data)}</div>
     </div>
   );
 };

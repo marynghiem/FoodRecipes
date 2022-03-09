@@ -83,7 +83,6 @@
 .ingredientDataResultsContainer {
   display: flex;
   flex-direction: column;
-
   padding: 2rem;
   margin: 10px;
   max-width: 18rem;
