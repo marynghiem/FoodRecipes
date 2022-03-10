@@ -8,9 +8,7 @@ const DataResultsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: start;
 `;
-const DataResultsIndividualContainer = styled.div`
-  display: inline-block;
-`;
+
 const DataResultsWhiteContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,10 +35,8 @@ export const FetchingStuff = () => {
         {data?.results?.length > 0 &&
           data.results.map((result) => (
             <DataResultsWhiteContainer>
-              <DataResultsIndividualContainer>
-                <img src={result.image} alt={result.title} />
-                <div className="dataResultsTitle">{result.title}</div>
-              </DataResultsIndividualContainer>
+              <img src={result.image} alt={result.title} />
+              <div className="dataResultsTitle">{result.title}</div>
             </DataResultsWhiteContainer>
           ))}
       </DataResultsContainer>

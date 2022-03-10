@@ -1,4 +1,22 @@
 import React from "react";
+import styled from "styled-components";
+
+const MarysFavoriteContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const WhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
+`;
 
 const MARYS_FAVE_DESSERT = [
   {
@@ -49,10 +67,12 @@ const MARYS_FAVE_DESSERT = [
 ];
 export const MarysTopDessert = () => {
   return (
-    <div>
+    <MarysFavoriteContainer>
       {MARYS_FAVE_DESSERT.map((dessert) => (
-        <img src={dessert.image} alt="food" />
+        <WhiteContainer>
+          <img src={dessert.image} alt="food" />
+        </WhiteContainer>
       ))}
-    </div>
+    </MarysFavoriteContainer>
   );
 };

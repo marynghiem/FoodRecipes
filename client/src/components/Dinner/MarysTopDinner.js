@@ -10,6 +10,23 @@ const MarysTopDinnerTitle = styled.h3`
   margin-top: 0px;
 `;
 
+const DinnerItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const TopDinnerWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
+`;
+
 const MARYS_TOP_DINNER_CHOICES = [
   {
     id: 640117,
@@ -36,11 +53,6 @@ const MARYS_TOP_DINNER_CHOICES = [
   { id: 640062, title: "Corn Avocado Salsa", image: "https://spoonacular.com/recipeImages/640062-312x231.jpg" },
   { id: 716311, title: "Mango Fried Rice", image: "https://spoonacular.com/recipeImages/716311-312x231.jpg" },
   {
-    id: 716217,
-    title: "Vietnamese Pancakes with Vegetables, Herbs and a Fragrant Dipping Sauce (Bánh Xèo)",
-    image: "https://spoonacular.com/recipeImages/716217-312x231.jpg",
-  },
-  {
     id: 715560,
     title: "World’s Greatest Lasagna Roll Ups",
     image: "https://spoonacular.com/recipeImages/715560-312x231.jpg",
@@ -51,9 +63,13 @@ export const MarysTopDinner = () => {
   return (
     <MarysTopDinnerContainer>
       <MarysTopDinnerTitle>Mary's Top Dinner Choices</MarysTopDinnerTitle>
-      {MARYS_TOP_DINNER_CHOICES.map((dinner) => (
-        <img src={dinner.image} alt="food" />
-      ))}
+      <DinnerItemsContainer>
+        {MARYS_TOP_DINNER_CHOICES.map((dinner) => (
+          <TopDinnerWhiteContainer>
+            <img src={dinner.image} alt="food" />{" "}
+          </TopDinnerWhiteContainer>
+        ))}
+      </DinnerItemsContainer>
     </MarysTopDinnerContainer>
   );
 };

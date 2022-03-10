@@ -10,6 +10,22 @@ const Title = styled.h2`
   margin-top: 0px;
   padding-top: 20px;
 `;
+const FoodItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const TopBreakfastWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
+`;
 
 const MARYS_FAVE_BREAKFAST = [
   {
@@ -46,10 +62,13 @@ export const MarysTopBreakfast = () => {
   return (
     <MarysTopBreakfastContainer>
       <Title>Mary's Top 10 Breakfast</Title>
-      {MARYS_FAVE_BREAKFAST.map((breakfast) => (
-        <img src={breakfast.image} alt="food"></img>
-      ))}
-      <img src="https://spoonacular.com/recipeImages/659604-312x231.jpg" alt="food" />
+      <FoodItemsContainer>
+        {MARYS_FAVE_BREAKFAST.map((breakfast) => (
+          <TopBreakfastWhiteContainer>
+            <img src={breakfast.image} alt="food"></img>{" "}
+          </TopBreakfastWhiteContainer>
+        ))}
+      </FoodItemsContainer>
     </MarysTopBreakfastContainer>
   );
 };

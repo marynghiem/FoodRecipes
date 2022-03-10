@@ -24,32 +24,32 @@ export const Footer = () => {
         </div>
         <div className="footer-section footer-categories">
           <h5 className="footer-categories-title">Categories</h5>
-          <a href="#breakfast" className="footer-categories-link">
+          <a href="/breakfast" className="footer-categories-link">
             Breakfast{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#lunch" className="footer-categories-link">
-            Lunch{" "}
+          <a href="/marysTopBreakfast" className="footer-categories-link">
+            Mary's Top Breakfast{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#dinner" className="footer-categories-link">
-            Dinner{" "}
+          <a href="/mainCourse" className="footer-categories-link">
+            Main Course{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#desserts" className="footer-categories-link">
+          <a href="/desserts" className="footer-categories-link">
             Desserts{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#maryspicks" className="footer-categories-link">
-            Mary's Picks{" "}
+          <a href="/marysTopDinner" className="footer-categories-link">
+            Mary's Top Dinner{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#snacks" className="footer-categories-link">
-            Snacks{" "}
+          <a href="/sideDish" className="footer-categories-link">
+            Side Dish{" "}
           </a>
           <div className="footer-slash">/</div>
-          <a href="#drinks" className="footer-categories-link">
-            Drinks{" "}
+          <a href="/mealPrepByIngredient" className="footer-categories-link">
+            Meal Prep By Ingredients{" "}
           </a>{" "}
           <div className="footer-slash">/</div>
           <a href="/calorieIntake" className="footer-categories-link">
