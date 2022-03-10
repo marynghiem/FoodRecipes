@@ -3,11 +3,23 @@ import React, { useEffect, useState } from "react";
 
 const BreakfastContainer = styled.div`
   background-color: rgb(255, 225, 230);
-  height: 230vh;
+  height: 380vh;
   width: 100vw;
 `;
 const BreakfastItemContainer = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+const BreakfastWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 `;
 
 export const Breakfast = () => {
@@ -22,13 +34,15 @@ export const Breakfast = () => {
 
   return (
     <BreakfastContainer>
-      {data?.results?.length > 0 &&
-        data.results.map((result) => (
-          <BreakfastItemContainer>
-            <img src={result.image} alt={result.title}></img>
-            <div className="dataResultsTitle">{result.title}</div>
-          </BreakfastItemContainer>
-        ))}
+      <BreakfastItemContainer>
+        {data?.results?.length > 0 &&
+          data.results.map((result) => (
+            <BreakfastWhiteContainer>
+              <img src={result.image} alt={result.title}></img>
+              <div className="dataResultsTitle">{result.title}</div>
+            </BreakfastWhiteContainer>
+          ))}
+      </BreakfastItemContainer>
     </BreakfastContainer>
   );
 };

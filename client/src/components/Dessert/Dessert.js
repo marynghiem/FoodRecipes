@@ -3,16 +3,23 @@ import styled from "styled-components";
 
 const DessertContainer = styled.div`
   background-image: url("dessertBackground.jpeg");
-  height: 300vh;
+  height: 380vh;
 `;
-const Container = styled.div`
-  width: 1000px;
-  background-color: white;
-  margin: auto;
+const FoodItemsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const DessertItemContainer = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 `;
 
 export const Dessert = () => {
@@ -27,7 +34,7 @@ export const Dessert = () => {
 
   return (
     <DessertContainer>
-      <Container>
+      <FoodItemsContainer>
         {data?.results?.length > 0 &&
           data.results.map((result) => (
             <DessertItemContainer>
@@ -35,7 +42,7 @@ export const Dessert = () => {
               <div>{result.title}</div>
             </DessertItemContainer>
           ))}
-      </Container>
+      </FoodItemsContainer>
     </DessertContainer>
   );
 };

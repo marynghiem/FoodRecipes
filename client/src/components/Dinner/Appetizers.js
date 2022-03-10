@@ -2,13 +2,26 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const AppetizerContainer = styled.div`
-  height: 200vh;
+  height: 380vh;
   width: 100vw;
   background-color: #cfebfd;
 `;
 
 const AppetizerItemContainer = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const AppetizerWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 `;
 
 export const Appetizers = () => {
@@ -22,13 +35,15 @@ export const Appetizers = () => {
   }, []);
   return (
     <AppetizerContainer>
-      {data?.results?.length > 0 &&
-        data.results.map((result) => (
-          <AppetizerItemContainer>
-            <img src={result.image} alt={result.title}></img>
-            <div>{result.title}</div>
-          </AppetizerItemContainer>
-        ))}
+      <AppetizerItemContainer>
+        {data?.results?.length > 0 &&
+          data.results.map((result) => (
+            <AppetizerWhiteContainer>
+              <img src={result.image} alt={result.title}></img>
+              <div>{result.title}</div>
+            </AppetizerWhiteContainer>
+          ))}
+      </AppetizerItemContainer>
     </AppetizerContainer>
   );
 };

@@ -2,13 +2,25 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const MainCourseContainer = styled.div`
-  height: 250vh;
+  height: 380vh;
   width: 100vw;
   background-color: #dbf3fa;
 `;
 
 const MainCourseItemContainer = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+const MainCourseWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 `;
 
 export const MainCourse = () => {
@@ -23,13 +35,15 @@ export const MainCourse = () => {
 
   return (
     <MainCourseContainer>
-      {data?.results?.length > 0 &&
-        data.results.map((result) => (
-          <MainCourseItemContainer>
-            <img src={result.image} alt={result.title}></img>
-            <div>{result.title}</div>
-          </MainCourseItemContainer>
-        ))}
+      <MainCourseItemContainer>
+        {data?.results?.length > 0 &&
+          data.results.map((result) => (
+            <MainCourseWhiteContainer>
+              <img src={result.image} alt={result.title}></img>
+              <div>{result.title}</div>
+            </MainCourseWhiteContainer>
+          ))}
+      </MainCourseItemContainer>
     </MainCourseContainer>
   );
 };

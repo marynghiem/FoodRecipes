@@ -2,13 +2,26 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const SideDishContainer = styled.div`
-  height: 250vh;
+  height: 380vh;
   width: 100vw;
   background-color: #cfebfd;
 `;
 
 const SideDishItemContainer = styled.div`
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const SideDishWhiteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  background-color: #fefefe;
 `;
 
 export const SideDish = () => {
@@ -22,13 +35,15 @@ export const SideDish = () => {
   }, []);
   return (
     <SideDishContainer>
-      {data?.results?.length > 0 &&
-        data.results.map((result) => (
-          <SideDishItemContainer>
-            <img src={result.image} alt={result.title}></img>
-            <div>{result.title}</div>
-          </SideDishItemContainer>
-        ))}
+      <SideDishItemContainer>
+        {data?.results?.length > 0 &&
+          data.results.map((result) => (
+            <SideDishWhiteContainer>
+              <img src={result.image} alt={result.title}></img>
+              <div>{result.title}</div>
+            </SideDishWhiteContainer>
+          ))}
+      </SideDishItemContainer>
     </SideDishContainer>
   );
 };
