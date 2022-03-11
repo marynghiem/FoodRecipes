@@ -91,7 +91,7 @@ app.get("/express_backend", async (req, res) => {
   res.send(data);
 });
 
-//ask jo about this
+//endpoint for types of meals
 app.get("/food_type_results", async (req, res) => {
   const mealtype = req.query.mealtype;
   let data = null;

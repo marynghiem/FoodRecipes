@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import ReactPaginate from "react-paginate";
 
 const DessertContainer = styled.div`
   background-image: url("dessertBackground.jpeg");

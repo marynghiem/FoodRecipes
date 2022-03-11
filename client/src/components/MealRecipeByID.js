@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import { useSearchParams } from "react-router-dom";
 
-export const MealRecipeByID = ({ id }) => {
+//import styled from "styled-components";
+
+export const MealRecipeByID = () => {
   const [mealData, setMealData] = useState("");
-  // need to figure out how to pass meal as prop from mealprepbyingredients.js
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get("mealId"));
   useEffect(() => {
-    const url = `mealplan_recipes?meal_id=${id}`;
+    const url = `mealplan_recipes?meal_id=${searchParams.get("mealId")}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => setMealData(data))
       .catch((exception) => console.log(exception));
-  }, [id]);
+  }, []);
 
   return <div></div>;
 };
