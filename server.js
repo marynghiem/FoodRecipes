@@ -152,7 +152,7 @@ app.get("/mealplan_recipes", async (req, res) => {
   const mealID = req.query.meal_id;
   console.log(mealID);
   // Make a request to spoonacular
-  const isDev = true;
+  const isDev = false;
   let data = null;
   if (isDev) {
     console.log("mockdata:" + mockData.mealPicturesData);
