@@ -41,6 +41,9 @@ export const MainCourse = () => {
             <MainCourseWhiteContainer>
               <img src={result.image} alt={result.title}></img>
               <div>{result.title}</div>
+              <a href={`/mealRecipeByID?mealId=${result.id}`}>
+                <button>Get Recipe</button>
+              </a>
             </MainCourseWhiteContainer>
           ))}
       </MainCourseItemContainer>

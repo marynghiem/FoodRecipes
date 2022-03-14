@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 
 const DessertContainer = styled.div`
   background-image: url("dessertBackground.jpeg");
-  height: 380vh;
+  height: 400vh;
 `;
 const FoodItemsContainer = styled.div`
   display: flex;
@@ -41,6 +41,9 @@ export const Dessert = () => {
             <DessertItemContainer>
               <img src={result.image} alt={result.title}></img>
               <div>{result.title}</div>
+              <a href={`/mealRecipeByID?mealId=${result.id}`}>
+                <button>Get Recipe</button>
+              </a>
             </DessertItemContainer>
           ))}
       </FoodItemsContainer>

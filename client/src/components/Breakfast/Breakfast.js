@@ -40,6 +40,9 @@ export const Breakfast = () => {
             <BreakfastWhiteContainer>
               <img src={result.image} alt={result.title}></img>
               <div className="dataResultsTitle">{result.title}</div>
+              <a href={`/mealRecipeByID?mealId=${result.id}`}>
+                <button>Get Recipe</button>
+              </a>
             </BreakfastWhiteContainer>
           ))}
       </BreakfastItemContainer>

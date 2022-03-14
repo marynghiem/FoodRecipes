@@ -70,7 +70,10 @@ export const MarysTopDessert = () => {
     <MarysFavoriteContainer>
       {MARYS_FAVE_DESSERT.map((dessert) => (
         <WhiteContainer>
-          <img src={dessert.image} alt="food" />
+          <img src={dessert.image} alt={dessert.title} />
+          <a href={`/mealRecipeByID?mealId=${dessert.id}`}>
+            <button>Get Recipe</button>
+          </a>
         </WhiteContainer>
       ))}
     </MarysFavoriteContainer>

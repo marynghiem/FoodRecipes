@@ -65,7 +65,10 @@ export const MarysTopBreakfast = () => {
       <FoodItemsContainer>
         {MARYS_FAVE_BREAKFAST.map((breakfast) => (
           <TopBreakfastWhiteContainer>
-            <img src={breakfast.image} alt="food"></img>{" "}
+            <img src={breakfast.image} alt={breakfast.title}></img>
+            <a href={`/mealRecipeByID?mealId=${breakfast.id}`}>
+              <button>Get Recipe</button>
+            </a>
           </TopBreakfastWhiteContainer>
         ))}
       </FoodItemsContainer>
