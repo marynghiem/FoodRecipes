@@ -1,10 +1,8 @@
 import "./App.css";
-import { AboutUs } from "./components/AboutUs";
 import { FoodCarousel } from "./components/FoodCarousel";
 import { Footer } from "./components/Footer";
 import { Heading } from "./components/Heading";
 import { NavBar } from "./components/NavBar";
-import { FetchingStuff } from "./components/FetchingStuff";
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { CalorieIntake } from "./components/Meal_Prep/CalorieIntake";
@@ -18,6 +16,7 @@ import { SideDish } from "./components/Dinner/SideDish";
 import { Dessert } from "./components/Dessert/Dessert";
 import { MarysTopDessert } from "./components/Dessert/MarysTopDessert";
 import { MealRecipeByID } from "./components/MealRecipeByID";
+import { HomePage } from "./components/Home_Page";
 
 function App() {
   return (
@@ -31,8 +30,7 @@ function App() {
             element={
               <>
                 <FoodCarousel />
-                <AboutUs />
-                <FetchingStuff />
+                <HomePage />
               </>
             }
           />

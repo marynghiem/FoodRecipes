@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { FoodJokes } from "./FoodJokes";
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 const DataResultsContainer = styled.div`
-  width: 78vw;
+  order: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
+  width: 1242px;
 `;
 
 const DataResultsWhiteContainer = styled.div`
@@ -30,7 +36,7 @@ export const FetchingStuff = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <DataResultsContainer>
         {data?.results?.length > 0 &&
           data.results.map((result) => (
@@ -43,6 +49,7 @@ export const FetchingStuff = () => {
             </DataResultsWhiteContainer>
           ))}
       </DataResultsContainer>
-    </div>
+      <FoodJokes />
+    </Container>
   );
 };

@@ -7,10 +7,18 @@ const FlowerBorder = styled.img`
   display: inline-block;
 `;
 const Title = styled.h1`
+  margin-bottom: 0px;
+  margin-top: 10px;
+`;
+const TitleImage = styled.img`
+  height: 50px;
+  width: auto;
+`;
+const Description = styled.p`
+  margin-top: 0px;
   font-family: Didot, serif;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
+  color: gray;
+  font-size: 15px;
 `;
 
 export const Heading = () => {
@@ -21,7 +29,10 @@ export const Heading = () => {
       <FlowerBorder src="flowers.png" alt="purple flowers" />
       <FlowerBorder src="flowers.png" alt="purple flowers" />
       <FlowerBorder src="flowers.png" alt="purple flowers" />
-      <Title>Mary Nghiem's Fave Eats</Title>
+      <Title>
+        <TitleImage src="MarysTitle.png" alt="Marys favorite eats" />
+      </Title>
+      <Description>Delicious, Favorful and Unique Food Choices Selected By Mary Nghiem</Description>
     </div>
   );
 };
