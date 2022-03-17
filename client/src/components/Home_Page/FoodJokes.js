@@ -4,7 +4,7 @@ import styled from "styled-components";
 const FoodJokesContainer = styled.div`
   background-color: rgb(236, 235, 235);
   width: 300px;
-  height: 16rem;
+  height: max-content;
   display: flex;
   flex-direction: column;
   order: 2;

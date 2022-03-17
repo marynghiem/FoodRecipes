@@ -37,6 +37,14 @@ export const MealPrepByIngredient = () => {
       setMealIngredients([...mealIngredients, popularIngredient]);
     }
   };
+  // change css when ingredient is clicked
+  const handlePopularIngredientClicked = (comparisionIngredient) => {
+    if (mealIngredients.includes(comparisionIngredient)) {
+      return "shadowPopularIngredient";
+    } else {
+      return;
+    }
+  };
 
   console.log(currentMealIngredient);
   console.log(mealIngredients);
@@ -50,7 +58,7 @@ export const MealPrepByIngredient = () => {
             <img
               src="carrots.jpeg"
               alt="carrots"
-              className="smallIngredientsPicture"
+              className={`smallIngredientsPicture ${handlePopularIngredientClicked("carrots")}`}
               onClick={() => addPopularIngredient("carrots")}
             />
             <div className="ingredient">Carrots</div>
@@ -59,7 +67,7 @@ export const MealPrepByIngredient = () => {
             <img
               src="pasta.jpeg"
               alt="pasta"
-              className="smallIngredientsPicture"
+              className={`smallIngredientsPicture ${handlePopularIngredientClicked("pasta")}`}
               onClick={() => addPopularIngredient("pasta")}
             />
             <div className="ingredient">Pasta</div>
@@ -68,7 +76,7 @@ export const MealPrepByIngredient = () => {
             <img
               src="chicken.jpeg"
               alt="chicken"
-              className="smallIngredientsPicture"
+              className={`smallIngredientsPicture ${handlePopularIngredientClicked("chicken")}`}
               onClick={() => addPopularIngredient("chicken")}
             />
             <div className="ingredient">Chicken</div>
@@ -77,7 +85,7 @@ export const MealPrepByIngredient = () => {
             <img
               src="apples.jpeg"
               alt="apples"
-              className="smallIngredientsPicture"
+              className={`smallIngredientsPicture ${handlePopularIngredientClicked("apples")}`}
               onClick={() => addPopularIngredient("apples")}
             />
             <div className="ingredient">Apples</div>
@@ -86,7 +94,7 @@ export const MealPrepByIngredient = () => {
             <img
               src="salmon.jpeg"
               alt="salmon"
-              className="smallIngredientsPicture"
+              className={`smallIngredientsPicture ${handlePopularIngredientClicked("salmon")}`}
               onClick={() => addPopularIngredient("salmon")}
             />
             <div className="ingredient">Salmon</div>
