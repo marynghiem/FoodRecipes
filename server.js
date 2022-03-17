@@ -166,6 +166,24 @@ app.get("/mealplan_recipes", async (req, res) => {
 
   res.send(data);
 });
+
+//end point for food jokes
+
+app.get("/meal_jokes", async (req, res) => {
+  let data = null;
+  const isDev = true;
+  if (isDev) {
+    data = {
+      text: "Did you hear about the 2 men from the monastery who opened up a fast food seafood restaurant? One was the fish friar, and the other was the chip monk.",
+    };
+  } else {
+    data = await fetch(`https://api.spoonacular.com/food/jokes/random?apiKey=${process.env.API_KEY}`).then((response) =>
+      response.json()
+    );
+  }
+  res.send(data);
+});
+
 //endpoint for mealplan info for ingredients
 app.get("/mealplan_ingredients", async (req, res) => {
   const mealIngredients = req.query.mealIngredients;
