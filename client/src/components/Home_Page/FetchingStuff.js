@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { FoodJokes } from "./FoodJokes";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
 const DataResultsContainer = styled.div`
-  order: 1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -36,20 +30,17 @@ export const FetchingStuff = () => {
   }, []);
 
   return (
-    <Container>
-      <DataResultsContainer>
-        {data?.results?.length > 0 &&
-          data.results.map((result) => (
-            <DataResultsWhiteContainer>
-              <img src={result.image} alt={result.title} />
-              <div className="dataResultsTitle">{result.title}</div>
-              <a href={`/mealRecipeByID?mealId=${result.id}`}>
-                <button>Get Recipe</button>
-              </a>
-            </DataResultsWhiteContainer>
-          ))}
-      </DataResultsContainer>
-      <FoodJokes />
-    </Container>
+    <DataResultsContainer>
+      {data?.results?.length > 0 &&
+        data.results.map((result) => (
+          <DataResultsWhiteContainer>
+            <img src={result.image} alt={result.title} />
+            <div className="dataResultsTitle">{result.title}</div>
+            <a href={`/mealRecipeByID?mealId=${result.id}`}>
+              <button>Get Recipe</button>
+            </a>
+          </DataResultsWhiteContainer>
+        ))}
+    </DataResultsContainer>
   );
 };
