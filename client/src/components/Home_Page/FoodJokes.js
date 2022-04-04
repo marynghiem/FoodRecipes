@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FoodJokesContainer = styled.div`
   background-color: rgb(236, 235, 235);
-  width: 290px;
+  width: 260px;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,10 @@ const FoodJokesContainer = styled.div`
   border: solid #000;
   border-width: 2px;
   font-family: Didot, serif;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 15px;
+  margin-bottom: 20px;
 `;
 const FoodJokesTitle = styled.h3`
   padding-bottom: 0px;

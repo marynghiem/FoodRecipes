@@ -5,10 +5,13 @@ const PicksOfThisWeekContainer = styled.div`
   width: 300px;
   height: 300px;
   margin-top: 20px;
+  text-align: left;
 `;
 const TitleContainer = styled.div`
   font-weight: bold;
   border-bottom: 1px solid;
+  font-size: 14px;
+  padding-bottom: 15px;
 `;
 const FoodContainer = styled.div`
   padding-top: 10px;

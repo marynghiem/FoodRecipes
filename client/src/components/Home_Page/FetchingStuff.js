@@ -19,6 +19,28 @@ const DataResultsWhiteContainer = styled.div`
   background-color: #fefefe;
 `;
 
+const FoodTitles = styled.div`
+  font-size: 18px;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+`;
+
+const FetchingStuffButton = styled.button`
+  padding: 0.5rem 1rem;
+  background-color: #7f21eb;
+  color: #f3f3f3;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-top: 15px;
+  vertical-align: middle;
+`;
+const Wrapper = styled.div`
+  &:hover ${FetchingStuffButton} {
+    cursor: pointer;
+    background-color: #6a0fd3;
+  }
+`;
+
 export const FetchingStuff = () => {
   const url = "/express_backend";
   const [data, setData] = useState();
@@ -35,9 +57,11 @@ export const FetchingStuff = () => {
         data.results.map((result) => (
           <DataResultsWhiteContainer>
             <img src={result.image} alt={result.title} />
-            <div className="dataResultsTitle">{result.title}</div>
+            <FoodTitles className="dataResultsTitle">{result.title}</FoodTitles>
             <a href={`/mealRecipeByID?mealId=${result.id}`}>
-              <button>Get Recipe</button>
+              <Wrapper>
+                <FetchingStuffButton>Get Recipe</FetchingStuffButton>
+              </Wrapper>
             </a>
           </DataResultsWhiteContainer>
         ))}

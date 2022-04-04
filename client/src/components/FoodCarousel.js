@@ -12,7 +12,10 @@ const CarouselContainer = styled.div`
 export const FoodCarousel = () => {
   return (
     <CarouselContainer>
-      <Carousel showThumbs={false}>
+      <Carousel showThumbs={false} dynamicHeight={true}>
+        <div>
+          <img src="frontfoodpic.jpeg" alt="appetizers"></img>
+        </div>
         <div>
           <img src="fruits.jpeg" alt="bowl of fruits"></img>
         </div>
