@@ -9,6 +9,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
 `;
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const HomePage = () => {
   return (
@@ -16,8 +20,10 @@ export const HomePage = () => {
       <AboutUs />
       <Container>
         <FetchingStuff />
-        <FoodJokes />
-        <PicksOfThisWeek />
+        <RightContainer>
+          <FoodJokes />
+          <PicksOfThisWeek />
+        </RightContainer>
       </Container>
     </>
   );

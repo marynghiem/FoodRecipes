@@ -3,19 +3,22 @@ import styled from "styled-components";
 
 const FoodJokesContainer = styled.div`
   background-color: rgb(236, 235, 235);
-  width: 300px;
+  width: 290px;
   height: max-content;
   display: flex;
   flex-direction: column;
-  order: 2;
   vertical-align: top;
   margin-right: 23px;
   margin-top: 10px;
   border: solid #000;
   border-width: 2px;
   font-family: Didot, serif;
+  padding-bottom: 15px;
 `;
-const FoodJokesTitle = styled.h3``;
+const FoodJokesTitle = styled.h3`
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+`;
 
 export const FoodJokes = () => {
   const [foodJokes, setFoodJokes] = useState();

@@ -4,6 +4,7 @@ import styled from "styled-components";
 const PicksOfThisWeekContainer = styled.div`
   width: 300px;
   height: 300px;
+  margin-top: 20px;
 `;
 const TitleContainer = styled.div`
   font-weight: bold;
