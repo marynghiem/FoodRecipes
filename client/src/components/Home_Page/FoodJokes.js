@@ -5,8 +5,6 @@ const FoodJokesContainer = styled.div`
   background-color: rgb(236, 235, 235);
   width: 260px;
   height: max-content;
-  display: flex;
-  flex-direction: column;
   vertical-align: top;
   margin-right: 23px;
   margin-top: 10px;

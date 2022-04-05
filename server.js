@@ -184,6 +184,23 @@ app.get("/meal_jokes", async (req, res) => {
   res.send(data);
 });
 
+//end point for food facts
+
+app.get("/meal_facts", async (req, res) => {
+  let data = null;
+  const isDev = true;
+  if (isDev) {
+    data = {
+      text: "The red food-coloring carmine used in Skittles and other candies is made from boiled cochineal bugs, a type of beetle.",
+    };
+  } else {
+    data = await fetch(`https://api.spoonacular.com/food/trivia/random?apiKey${process.env.API_KEY}`).then((response) =>
+      response.json()
+    );
+  }
+  res.send(data);
+});
+
 //endpoint for mealplan info for ingredients
 app.get("/mealplan_ingredients", async (req, res) => {
   const mealIngredients = req.query.mealIngredients;

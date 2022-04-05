@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
 
 const CarouselContainer = styled.div`
-  width: 70vw;
+  width: 73vw;
   display: inline-block;
   margin-top: 25px;
 `;

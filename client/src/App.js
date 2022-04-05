@@ -34,30 +34,15 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/breakfast"
-            element={
-              <>
-                <Breakfast />
-              </>
-            }
-          />
+          <Route path="/breakfast" element={<Breakfast />} />
           <Route path="/marysTopBreakfast" element={<MarysTopBreakfast />} />
-
           <Route path="/appetizers" element={<Appetizers />} />
           <Route path="/mainCourse" element={<MainCourse />} />
           <Route path="/marysTopDinner" element={<MarysTopDinner />} />
           <Route path="/sideDish" element={<SideDish />} />
           <Route path="/marysTopDesserts" element={<MarysTopDessert />} />
           <Route path="/desserts" element={<Dessert />} />
-          <Route
-            path="/calorieIntake"
-            element={
-              <>
-                <CalorieIntake />
-              </>
-            }
-          />
+          <Route path="/calorieIntake" element={<CalorieIntake />} />
           <Route path="/mealPrepByIngredient" element={<MealPrepByIngredient />} />
           <Route path="/mealRecipeByID" element={<MealRecipeByID />} />
           <Route path="*" element={<Navigate to="/" replace />} />

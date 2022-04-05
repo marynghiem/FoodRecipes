@@ -26,34 +26,42 @@ export const Footer = () => {
         <div className="footer-section footer-categories">
           <h5 className="footer-categories-title">Categories</h5>
           <a href="/breakfast" className="footer-categories-link">
+            {" "}
             Breakfast{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/marysTopBreakfast" className="footer-categories-link">
+            {" "}
             Mary's Top Breakfast{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/mainCourse" className="footer-categories-link">
+            {" "}
             Main Course{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/desserts" className="footer-categories-link">
+            {" "}
             Desserts{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/marysTopDinner" className="footer-categories-link">
+            {" "}
             Mary's Top Dinner{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/sideDish" className="footer-categories-link">
+            {" "}
             Side Dish{" "}
           </a>
           <div className="footer-slash">/</div>
           <a href="/mealPrepByIngredient" className="footer-categories-link">
+            {" "}
             Meal Prep By Ingredients{" "}
           </a>{" "}
           <div className="footer-slash">/</div>
           <a href="/calorieIntake" className="footer-categories-link">
+            {" "}
             Meal Prep By Calories{" "}
           </a>
         </div>
