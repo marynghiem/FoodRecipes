@@ -9,6 +9,7 @@ const MarysFavoriteContainer = styled.div`
   height: max-content;
   width: 100vw;
   padding-bottom: 30px;
+  background-color: #feddb6;
 `;
 
 const WhiteContainer = styled.div`
@@ -19,6 +20,19 @@ const WhiteContainer = styled.div`
   max-width: 18rem;
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
   background-color: #fefefe;
+`;
+const DessertsButton = styled.button`
+  padding: 0.5rem 2rem;
+  background-color: #fdbb6d;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
 `;
 
 const MARYS_FAVE_DESSERT = [
@@ -74,8 +88,9 @@ export const MarysTopDessert = () => {
       {MARYS_FAVE_DESSERT.map((dessert) => (
         <WhiteContainer>
           <img src={dessert.image} alt={dessert.title} />
+          <div>{dessert.title}</div>
           <a href={`/mealRecipeByID?mealId=${dessert.id}`}>
-            <button>Get Recipe</button>
+            <DessertsButton>Get Recipe</DessertsButton>
           </a>
         </WhiteContainer>
       ))}

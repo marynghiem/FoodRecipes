@@ -28,6 +28,19 @@ const TopBreakfastWhiteContainer = styled.div`
   background-color: #fefefe;
   font-family: Garamond, serif;
 `;
+const TopBreakfastButton = styled.button`
+  padding: 0.5rem 2rem;
+  background-color: #9794f9;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 5px;
+`;
 
 const MARYS_FAVE_BREAKFAST = [
   {
@@ -70,7 +83,7 @@ export const MarysTopBreakfast = () => {
             <img src={breakfast.image} alt={breakfast.title}></img>
             <div>{breakfast.title}</div>
             <a href={`/mealRecipeByID?mealId=${breakfast.id}`}>
-              <button>Get Recipe</button>
+              <TopBreakfastButton>Get Recipe</TopBreakfastButton>
             </a>
           </TopBreakfastWhiteContainer>
         ))}

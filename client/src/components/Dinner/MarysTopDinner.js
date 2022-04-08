@@ -30,6 +30,20 @@ const TopDinnerWhiteContainer = styled.div`
   background-color: #fefefe;
 `;
 
+const TopDinnerButton = styled.button`
+  padding: 0.5rem 2rem;
+  background-color: #ff6865;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+`;
+
 const MARYS_TOP_DINNER_CHOICES = [
   {
     id: 640117,
@@ -71,7 +85,7 @@ export const MarysTopDinner = () => {
           <TopDinnerWhiteContainer>
             <img src={dinner.image} alt="food" /> <div>{dinner.title}</div>
             <a href={`/mealRecipeByID?mealId=${dinner.id}`}>
-              <button>Get Recipe</button>
+              <TopDinnerButton>Get Recipe</TopDinnerButton>
             </a>
           </TopDinnerWhiteContainer>
         ))}

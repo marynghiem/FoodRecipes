@@ -24,6 +24,19 @@ const AppetizerWhiteContainer = styled.div`
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
   background-color: #fefefe;
 `;
+const AppetizerButton = styled.button`
+  padding: 0.5rem 2rem;
+  background-color: #91bad6;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+`;
 
 export const Appetizers = () => {
   const url = "/food_type_results?mealtype=appetizer";
@@ -43,7 +56,7 @@ export const Appetizers = () => {
               <img src={result.image} alt={result.title}></img>
               <div>{result.title}</div>
               <a href={`/mealRecipeByID?mealId=${result.id}`}>
-                <button>Get Recipe</button>
+                <AppetizerButton>Get Recipe</AppetizerButton>
               </a>
             </AppetizerWhiteContainer>
           ))}

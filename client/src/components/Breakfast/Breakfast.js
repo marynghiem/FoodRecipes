@@ -23,6 +23,20 @@ const BreakfastWhiteContainer = styled.div`
   background-color: #fefefe;
 `;
 
+const BreakfastButton = styled.button`
+  padding: 0.5rem 2rem;
+  background-color: pink;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 5px;
+`;
+
 export const Breakfast = () => {
   const url = `/food_type_results?mealtype=breakfast`;
   const [data, setData] = useState();
@@ -42,7 +56,7 @@ export const Breakfast = () => {
               <img src={result.image} alt={result.title}></img>
               <div>{result.title}</div>
               <a href={`/mealRecipeByID?mealId=${result.id}`}>
-                <button>Get Recipe</button>
+                <BreakfastButton>Get Recipe</BreakfastButton>
               </a>
             </BreakfastWhiteContainer>
           ))}

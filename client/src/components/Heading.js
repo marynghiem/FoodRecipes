@@ -29,9 +29,11 @@ export const Heading = () => {
       <FlowerBorder src="flowers.png" alt="purple flowers" />
       <FlowerBorder src="flowers.png" alt="purple flowers" />
       <FlowerBorder src="flowers.png" alt="purple flowers" />
-      <Title>
-        <TitleImage src="MarysTitle.png" alt="Marys favorite eats" />
-      </Title>
+      <a href="/home">
+        <Title>
+          <TitleImage src="MarysTitle.png" alt="Marys favorite eats" />
+        </Title>
+      </a>
       <Description>Delicious, Favorful and Unique Food Choices Selected By Mary Nghiem</Description>
     </div>
   );
