@@ -11,6 +11,7 @@ const BreakfastItemContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: Garamond, serif;
 `;
 const BreakfastWhiteContainer = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ export const Breakfast = () => {
           data.results.map((result) => (
             <BreakfastWhiteContainer>
               <img src={result.image} alt={result.title}></img>
-              <div className="dataResultsTitle">{result.title}</div>
+              <div>{result.title}</div>
               <a href={`/mealRecipeByID?mealId=${result.id}`}>
                 <button>Get Recipe</button>
               </a>

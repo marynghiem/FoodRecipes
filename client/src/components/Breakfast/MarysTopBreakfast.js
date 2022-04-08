@@ -26,6 +26,7 @@ const TopBreakfastWhiteContainer = styled.div`
   max-width: 18rem;
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
   background-color: #fefefe;
+  font-family: Garamond, serif;
 `;
 
 const MARYS_FAVE_BREAKFAST = [
@@ -62,11 +63,12 @@ const MARYS_FAVE_BREAKFAST = [
 export const MarysTopBreakfast = () => {
   return (
     <MarysTopBreakfastContainer>
-      <Title>Mary's Top 10 Breakfast</Title>
+      <Title>Mary's Top Breakfast</Title>
       <FoodItemsContainer>
         {MARYS_FAVE_BREAKFAST.map((breakfast) => (
           <TopBreakfastWhiteContainer>
             <img src={breakfast.image} alt={breakfast.title}></img>
+            <div>{breakfast.title}</div>
             <a href={`/mealRecipeByID?mealId=${breakfast.id}`}>
               <button>Get Recipe</button>
             </a>

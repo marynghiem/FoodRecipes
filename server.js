@@ -184,12 +184,10 @@ app.get("/meal_jokes", async (req, res) => {
   res.send(data);
 });
 
-//end point for food facts
-
 //endpoint for mealplan info for ingredients
 app.get("/mealplan_ingredients", async (req, res) => {
   const mealIngredients = req.query.mealIngredients;
-  const isDev = true;
+  const isDev = false;
   let data = null;
   if (isDev) {
     data = [

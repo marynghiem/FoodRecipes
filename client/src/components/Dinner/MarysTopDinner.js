@@ -17,6 +17,7 @@ const DinnerItemsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: Garamond, serif;
 `;
 
 const TopDinnerWhiteContainer = styled.div`
@@ -68,8 +69,7 @@ export const MarysTopDinner = () => {
       <DinnerItemsContainer>
         {MARYS_TOP_DINNER_CHOICES.map((dinner) => (
           <TopDinnerWhiteContainer>
-            <h2>{dinner.title}</h2>
-            <img src={dinner.image} alt="food" />{" "}
+            <img src={dinner.image} alt="food" /> <div>{dinner.title}</div>
             <a href={`/mealRecipeByID?mealId=${dinner.id}`}>
               <button>Get Recipe</button>
             </a>

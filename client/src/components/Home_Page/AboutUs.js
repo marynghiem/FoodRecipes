@@ -4,7 +4,7 @@ import styled from "styled-components";
 const AboutUsContainer = styled.div`
   background-color: rgb(236, 235, 235);
   width: 290px;
-  height: 450px;
+  height: 490px;
   display: inline-block;
   vertical-align: top;
   margin-left: 50px;
@@ -15,7 +15,7 @@ const AboutUsTitle = styled.h4`
   font-weight: bold;
   padding: 10px 0px 10px 0px;
   margin-bottom: 0px;
-  margin-top: 10px;
+  margin-top: 15px;
 `;
 
 const MaryPicture = styled.img`
@@ -30,11 +30,19 @@ const MaryInfo = styled.p`
   padding: 10px;
   font-family: Georgia, serif;
   margin-top: 0px;
+  line-height: 1.3;
+  font-size: 16px;
+  padding-bottom: 15px;
 `;
 
 const SpacedIcon = styled.i`
+  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
+`;
+const SocialMediaLinks = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
 
 export const AboutUs = () => {
@@ -51,11 +59,21 @@ export const AboutUs = () => {
 
       <h5>FOLLOW ME</h5>
       <div>
-        <SpacedIcon className="fa fa-facebook"></SpacedIcon>
-        <SpacedIcon className="fa fa-instagram"></SpacedIcon>
-        <SpacedIcon className="fa fa-twitter"></SpacedIcon>
-        <SpacedIcon className="fa fa-youtube-play"></SpacedIcon>
-        <SpacedIcon className="fa fa-envelope"></SpacedIcon>
+        <SocialMediaLinks href="https://www.facebook.com/mary.nghiem.7/">
+          <SpacedIcon className="fa fa-facebook"></SpacedIcon>
+        </SocialMediaLinks>
+        <SocialMediaLinks href="https://www.instagram.com/marynghiem46/?hl=en">
+          <SpacedIcon className="fa fa-instagram"></SpacedIcon>
+        </SocialMediaLinks>
+        <SocialMediaLinks href="https://twitter.com/Mary_Nghiem">
+          <SpacedIcon className="fa fa-twitter"></SpacedIcon>
+        </SocialMediaLinks>
+        <SocialMediaLinks>
+          <SpacedIcon className="fa fa-youtube-play"></SpacedIcon>
+        </SocialMediaLinks>
+        <SocialMediaLinks>
+          <SpacedIcon className="fa fa-envelope"></SpacedIcon>
+        </SocialMediaLinks>
       </div>
     </AboutUsContainer>
   );

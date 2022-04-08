@@ -1,6 +1,6 @@
 .footer {
-  background: #303036;
-  color: #d3d3d3;
+  background: #414148;
+  color: white;
   height: 320px;
   position: relative;
 }
@@ -10,7 +10,7 @@
 }
 
 .footer .footer-bottom {
-  background: #59238f;
+  background: #6a2baa;
   color: white;
   height: 20px;
   width: 100%;
@@ -67,7 +67,7 @@
 
 .footer-categories-link {
   text-decoration: none;
-  color: #f3f3f3;
+  color: white;
   font-size: 14px;
 }
 

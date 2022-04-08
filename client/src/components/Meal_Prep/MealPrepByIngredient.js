@@ -25,7 +25,15 @@ export const MealPrepByIngredient = () => {
   };
 
   const getMealByIngredientsData = () => {
-    const url = `/mealplan_ingredients?mealIngredients=${mealIngredients[0]}`;
+    const url = `/mealplan_ingredients?mealIngredients=${
+      mealIngredients.length === 3
+        ? `${mealIngredients[0]},+ ${mealIngredients[1]},+
+       ${mealIngredients[3]}`
+        : mealIngredients.length === 2
+        ? `${mealIngredients[0]},+ ${mealIngredients[1]}`
+        : `${mealIngredients[0]}`
+    }`;
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => setMealByIngredientsData(data))
