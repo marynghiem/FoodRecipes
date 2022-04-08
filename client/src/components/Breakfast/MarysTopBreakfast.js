@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const MarysTopBreakfastContainer = styled.div`
   background-color: #dcd0ff;
-  height: 130vh;
+  height: max-content;
   width: 100vw;
+  padding-bottom: 30px;
 `;
 const Title = styled.h2`
   margin-top: 0px;

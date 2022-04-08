@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { AboutUs } from "./AboutUs";
 import { FetchingStuff } from "./FetchingStuff";
-import { FoodFact } from "./FoodFact";
 import { FoodJokes } from "./FoodJokes";
 import { PicksOfThisWeek } from "./PicksOfThisWeek";
 
@@ -24,7 +23,6 @@ export const HomePage = () => {
         <RightContainer>
           <FoodJokes />
           <PicksOfThisWeek />
-          <FoodFact />
         </RightContainer>
       </Container>
     </>

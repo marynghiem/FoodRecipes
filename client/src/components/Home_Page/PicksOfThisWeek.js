@@ -20,6 +20,7 @@ const FoodContainer = styled.div`
 
 const MarysWeeklyPickLinks = styled.a`
   text-decoration: none;
+  color: inherit;
 `;
 
 const MARYS_TOP_PICKS_OF_THE_WEEK = [

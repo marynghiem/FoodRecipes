@@ -4,7 +4,9 @@ import ReactPaginate from "react-paginate";
 
 const DessertContainer = styled.div`
   background-image: url("dessertBackground.jpeg");
-  height: 400vh;
+  height: max-content;
+  width: 100vw;
+  padding-bottom: 30px;
 `;
 const FoodItemsContainer = styled.div`
   display: flex;

@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const AboutUsContainer = styled.div`
   background-color: rgb(236, 235, 235);
-  width: 300px;
-  height: 400px;
+  width: 290px;
+  height: 450px;
   display: inline-block;
   vertical-align: top;
   margin-left: 50px;
@@ -31,6 +31,7 @@ const MaryInfo = styled.p`
   font-family: Georgia, serif;
   margin-top: 0px;
 `;
+
 const SpacedIcon = styled.i`
   padding-left: 15px;
   padding-right: 15px;
@@ -44,8 +45,10 @@ export const AboutUs = () => {
       <MaryInfo>
         Mary Nghiem recently graduated from San Jose State. She lives in California with three other siblings and her
         two dogs, Mikasa and Cappy. She enjoys Math, playing Pokemon Go and watching anime. Currently, she is working on
-        pivoting into tech field by teaching herself how to code.
+        pivoting into tech field by teaching herself how to code. She has created many projects like a Pokemon
+        Scribbl.io, Calculator, Secret Santa and many more.
       </MaryInfo>
+
       <h5>FOLLOW ME</h5>
       <div>
         <SpacedIcon className="fa fa-facebook"></SpacedIcon>

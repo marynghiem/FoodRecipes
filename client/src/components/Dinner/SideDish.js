@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const SideDishContainer = styled.div`
-  height: 380vh;
+  height: max-content;
   width: 100vw;
+  padding-bottom: 30px;
   background-color: #cfebfd;
 `;
 

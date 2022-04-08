@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const MarysTopDinnerContainer = styled.div`
   background-image: url("marysFavoriteDinnerBackground.jpeg");
-  height: 130vh;
+  height: max-content;
+  width: 100vw;
+  padding-bottom: 30px;
 `;
 
 const MarysTopDinnerTitle = styled.h3`

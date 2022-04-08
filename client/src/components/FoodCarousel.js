@@ -13,12 +13,11 @@ export const FoodCarousel = () => {
   return (
     <CarouselContainer>
       <Carousel showThumbs={false} dynamicHeight={true}>
-        <div>
-          <img src="frontfoodpic.jpeg" alt="appetizers"></img>
-        </div>
-        <div>
-          <img src="fruits.jpeg" alt="bowl of fruits"></img>
-        </div>
+        <a href="/mealPrepByIngredient">
+          <div>
+            <img src="frontfoodpic1.png" alt="appetizers"></img>
+          </div>
+        </a>
       </Carousel>
     </CarouselContainer>
   );

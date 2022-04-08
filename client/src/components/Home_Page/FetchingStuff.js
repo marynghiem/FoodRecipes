@@ -7,6 +7,9 @@ const DataResultsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   width: 1242px;
+  height: max-content;
+  padding-bottom: 30px;
+  padding-top: 30px;
 `;
 
 const DataResultsWhiteContainer = styled.div`

@@ -6,6 +6,9 @@ const MarysFavoriteContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  height: max-content;
+  width: 100vw;
+  padding-bottom: 30px;
 `;
 
 const WhiteContainer = styled.div`
