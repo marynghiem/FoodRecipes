@@ -1,13 +1,22 @@
 require("dotenv").config();
-const { response } = require("express");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
+const path = require("path");
 const fetch = require("node-fetch");
 const mockData = require("./testSpoonacularData");
 
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+/* Setup for serving react app to prod */
+const publicPath = path.join(__dirname, "client/build");
+app.use(express.static(publicPath));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(publicPath, "index.html"));
+});
+/* End setup for serving react app to prod */
 
 // endpoint for front page
 app.get("/express_backend", async (req, res) => {
