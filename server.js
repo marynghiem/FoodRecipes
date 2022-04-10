@@ -12,10 +12,6 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 /* Setup for serving react app to prod */
 const publicPath = path.join(__dirname, "client/build");
 app.use(express.static(publicPath));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"));
-});
 /* End setup for serving react app to prod */
 
 // endpoint for front page
@@ -835,4 +831,8 @@ app.get("/mealplan_ingredients", async (req, res) => {
     console.log(data);
   }
   res.send(data);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(publicPath, "index.html"));
 });
