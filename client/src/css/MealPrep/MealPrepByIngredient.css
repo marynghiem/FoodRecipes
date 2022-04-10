@@ -97,3 +97,17 @@ input:focus {
 .shadowPopularIngredient {
   filter: brightness(50%);
 }
+
+.IngredientRexipeButton{ padding: 0.5rem 2rem;
+  background-color: pink;
+  color: white;
+  border: none;
+  font-family: Garamond, serif;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px grey;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 5px;
+
+}

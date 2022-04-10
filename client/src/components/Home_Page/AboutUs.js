@@ -9,6 +9,9 @@ const AboutUsContainer = styled.div`
   vertical-align: top;
   margin-left: 50px;
   margin-top: 25px;
+  @media (max-width: 1260px) {
+    display: none;
+  }
 `;
 
 const AboutUsTitle = styled.h4`
@@ -30,7 +33,7 @@ const MaryInfo = styled.p`
   padding: 10px;
   font-family: Georgia, serif;
   margin-top: 0px;
-  line-height: 1.3;
+  line-height: 1.4;
   font-size: 16px;
   padding-bottom: 15px;
 `;

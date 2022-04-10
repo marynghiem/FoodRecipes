@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FoodCarousel } from "../FoodCarousel";
 import { AboutUs } from "./AboutUs";
 import { FetchingStuff } from "./FetchingStuff";
 import { FoodJokes } from "./FoodJokes";
@@ -17,6 +18,7 @@ const RightContainer = styled.div`
 export const HomePage = () => {
   return (
     <>
+      <FoodCarousel />
       <AboutUs />
       <Container>
         <FetchingStuff />

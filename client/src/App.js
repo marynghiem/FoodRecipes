@@ -25,15 +25,7 @@ function App() {
         <Heading />
         <NavBar />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <FoodCarousel />
-                <HomePage />
-              </>
-            }
-          />
+          <Route path="/" element={<HomePage />} />
           <Route path="/breakfast" element={<Breakfast />} />
           <Route path="/marysTopBreakfast" element={<MarysTopBreakfast />} />
           <Route path="/appetizers" element={<Appetizers />} />

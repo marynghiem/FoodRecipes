@@ -10,6 +10,10 @@ const DataResultsContainer = styled.div`
   height: max-content;
   padding-bottom: 30px;
   padding-top: 30px;
+  @media (max-width: 1260px) {
+    padding-top: 0px;
+    justify-content: space-evenly;
+  }
 `;
 
 const DataResultsWhiteContainer = styled.div`
@@ -29,18 +33,20 @@ const FoodTitles = styled.div`
 
 const FetchingStuffButton = styled.button`
   padding: 0.5rem 1rem;
-  background-color: #7f21eb;
-  color: #f3f3f3;
-  border: none;
-  font-family: "Roboto", sans-serif;
+  background-color: white;
+  font-family: Garamond, serif;
   font-size: 1rem;
   margin-top: 15px;
   vertical-align: middle;
+  color: black;
+  border: solid #000;
+  border-width: 1px;
 `;
 const Wrapper = styled.div`
   &:hover ${FetchingStuffButton} {
     cursor: pointer;
-    background-color: #6a0fd3;
+    border-color: gray;
+    color: gray;
   }
 `;
 

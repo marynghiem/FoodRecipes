@@ -151,7 +151,7 @@ export const MealPrepByIngredient = () => {
               <div className="ingredientDataResultsTitle">{data.title}</div>
               <img src={data.image} alt={data.title} className="ingredientDataResultsImage"></img>
               <a href={`/mealRecipeByID?mealId=${data.id}`}>
-                <button>Get Recipe</button>
+                <button className="IngredientRexipeButton">Get Recipe</button>
               </a>
             </div>
           ))}
