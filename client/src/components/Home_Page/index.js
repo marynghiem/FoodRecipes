@@ -13,6 +13,9 @@ const Container = styled.div`
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const HomePage = () => {

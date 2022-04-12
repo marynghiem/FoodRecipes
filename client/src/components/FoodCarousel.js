@@ -7,6 +7,9 @@ const CarouselContainer = styled.div`
   width: 73vw;
   display: inline-block;
   margin-top: 25px;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 export const FoodCarousel = () => {

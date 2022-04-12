@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.c0f59ce7.css",
-    "main.js": "/static/js/main.ac88f68c.js",
+    "main.js": "/static/js/main.d96e3c2f.js",
     "static/js/787.c2677bb9.chunk.js": "/static/js/787.c2677bb9.chunk.js",
     "static/media/mealPlanByIngredientsBackground.jpeg": "/static/media/mealPlanByIngredientsBackground.36d7ea308fd93f38f287.jpeg",
     "index.html": "/index.html",
     "main.c0f59ce7.css.map": "/static/css/main.c0f59ce7.css.map",
-    "main.ac88f68c.js.map": "/static/js/main.ac88f68c.js.map",
+    "main.d96e3c2f.js.map": "/static/js/main.d96e3c2f.js.map",
     "787.c2677bb9.chunk.js.map": "/static/js/787.c2677bb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0f59ce7.css",
-    "static/js/main.ac88f68c.js"
+    "static/js/main.d96e3c2f.js"
   ]
 }
