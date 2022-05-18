@@ -1,5 +1,4 @@
 import "./App.css";
-import { FoodCarousel } from "./components/FoodCarousel";
 import { Footer } from "./components/Footer";
 import { Heading } from "./components/Heading";
 import { NavBar } from "./components/NavBar";

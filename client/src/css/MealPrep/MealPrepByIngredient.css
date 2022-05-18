@@ -1,7 +1,9 @@
 .mealByIngredientContainer {
-  background-image: url("../../../public/mealPlanByIngredientsBackground.jpeg");
-  height: 220vh;
-  padding-top: 80px;
+  background-color: rgb(253, 209, 217);
+  height: max-content;
+  width: 100vw;
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 .mealByIngredientWhiteContainer {
   width: 700px;
